@@ -1,0 +1,158 @@
+body, html {
+    height: 100vh;
+}
+body{
+    margin: 0; 
+    display: grid;
+    background-image: url(images/office-2.png);
+    grid-template-columns: auto 40% 40% ;
+    grid-template-rows: 70% 70% 25% ;
+    grid-template-areas: 
+        "sidebar section1 section2"
+        "sidebar main main"
+        "sidebar footer footer";
+       
+}
+
+aside {
+    grid-area: sidebar;
+    font-family: 'Cormorant Upright', serif;
+    color: rgb(75, 73, 73);
+    border: 3px gray groove;
+    border-radius: 20px;
+}
+
+.langues {
+
+    grid-area: section1;
+    color: rgb(49, 48, 49);
+    font-family: 'Cormorant Upright', serif;
+    font-size:x-large;
+    margin-left: 15px;
+}
+.progress-bar{
+    border:1px solid gray;
+    color: rgb(49, 48, 49);
+}
+section:nth-of-type(1) {
+    grid-area: section1;
+    font-family: 'Cormorant Upright', serif;
+    color: rgb(75, 73, 73);
+    font-size:x-large;
+    text-align: center;
+    
+
+}
+.competence li{
+    list-style-type: none; 
+}
+section:nth-of-type(2) {
+    padding: top 20px;
+    grid-area: section2;
+    font-family: 'Cormorant Upright', serif;
+    color: rgb(75, 73, 73);
+    font-size:x-large;
+    text-align: center;
+    list-style-type: none; 
+    line-height: 2em;
+}
+.formation li{
+    list-style-type: none; 
+}
+main {
+    grid-area: main;
+    font-family: 'Cormorant Upright', serif;
+    color: rgb(49, 48, 49);
+    font-size:x-large;
+    text-align: center;
+    padding-top:0;
+    list-style-type: none; 
+}
+.experiencepro li{
+    list-style-type: none; 
+}
+footer {
+    grid-area: footer;
+    font-family: 'Cormorant Upright', serif;
+    color: rgb(49, 48, 49);
+    text-align: center;
+    border: 3px gray groove;
+    border-radius: 20px;
+}
+a{
+    font-family: 'Cormorant Upright', serif;
+    font-size: x-large;
+    color: rgb(49, 48, 49);
+    text-decoration-style: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) { 
+    
+    
+    body {
+        margin: 20px;
+        display: grid;
+        background-image: url(images/office-2.png);
+        grid-template-columns: auto 40% 40%;
+        grid-template-rows: 50% 50% 10%;
+        grid-template-areas:
+            "sidebar section1 section2"
+            "sidebar main main"
+            "sidebar footer footer";
+    }
+    section:nth-of-type(1) {
+        grid-area: section1;
+        font-family: 'Cormorant Upright', serif;
+        color: rgb(75, 73, 73);
+        font-size:30px;
+        text-align: center;
+        line-height: 2em;
+        
+    
+    }
+    section:nth-of-type(2) {
+        padding: top 20px;
+        grid-area: section2;
+        font-family: 'Cormorant Upright', serif;
+        color: rgb(75, 73, 73);
+        font-size:30px;
+        text-align: center;
+        list-style-type: none; 
+        
+    }
+    main {
+        grid-area: main;
+        font-family: 'Cormorant Upright', serif;
+        color: rgb(49, 48, 49);
+        font-size:30px;
+        text-align: center;
+        padding-top:0;
+        list-style-type: none; 
+    }
+    a{
+    font-family: 'Cormorant Upright', serif;
+    font-size: 25px;
+    color: rgb(49, 48, 49);
+    text-decoration-style: none;
+    text-align: center;
+    }
+    legend{
+        font-size: 2em;
+    }
+   
+    .langues {
+    
+        grid-area: section1;
+        color: rgb(49, 48, 49);
+        font-family: 'Cormorant Upright', serif;
+        font-size:30px;
+        margin-left: 15px;
+    }
+    h1{
+        margin-top: 1em;
+    }
+    h3{
+        margin-bottom: 1em;
+    }
+}
