@@ -38,6 +38,9 @@ img{
     border:1px solid gray;
     color: rgb(49, 48, 49);
 }
+.version{
+    text-align: center;
+}
 section:nth-of-type(1) {
     grid-area: section1;
     font-family: 'Cormorant Upright', serif;
