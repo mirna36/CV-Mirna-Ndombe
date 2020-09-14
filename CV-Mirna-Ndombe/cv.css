@@ -21,9 +21,20 @@ aside {
     border: 3px gray groove;
     border-radius: 20px;
 }
+h1{
+    font-size: x-large;
+}
+h2{
+    font-size: large;
+    margin-top: 20px;
+}
+h3{
+    font-size: x-large;
+}
 img{
-    width:100%;
+    width:50%;
     border-radius: 200px 200px 200px 100px;
+    float: right;
 }
 
 .langues {
@@ -33,13 +44,17 @@ img{
     font-family: 'Cormorant Upright', serif;
     font-size:x-large;
     margin-left: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
 }
 .progress-bar{
     border:1px solid gray;
     color: rgb(49, 48, 49);
 }
 .version{
-    text-align: center;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 15px;
 }
 section:nth-of-type(1) {
     grid-area: section1;
@@ -92,6 +107,7 @@ a{
     color: rgb(49, 48, 49);
     text-decoration-style: none;
     text-align: center;
+    padding-top: 10px;
 }
 
 @media screen and (max-width: 870px) { 
@@ -101,6 +117,10 @@ a{
         
         display:block;
         
+    }
+    h2{
+        font-size: x-large;
+        margin-top: 20px;
     }
 
     img{
