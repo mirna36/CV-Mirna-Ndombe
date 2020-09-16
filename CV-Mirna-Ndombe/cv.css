@@ -6,27 +6,31 @@ body{
     display: grid;
     background-image: url(images/office-2.png);
     grid-template-columns: auto 40% 40% ;
-    grid-template-rows: 70% 70% 25% ;
+    grid-template-rows: 60% 80% 20% ;
     grid-template-areas: 
         "sidebar section1 section2"
         "sidebar main main"
         "sidebar footer footer";
-       
 }
 
 aside {
     grid-area: sidebar;
     font-family: 'Cormorant Upright', serif;
     color: rgb(75, 73, 73);
-    border: 3px gray groove;
-    border-radius: 20px;
+    border-right: 3px gray groove;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
 }
 h1{
     font-size: x-large;
+
 }
 h2{
-    font-size: large;
+    font-size: x-large;
     margin-top: 20px;
+
 }
 h3{
     font-size: x-large;
@@ -37,39 +41,46 @@ img{
     float: right;
 }
 
-.langues {
 
-    grid-area: section1;
-    color: rgb(49, 48, 49);
-    font-family: 'Cormorant Upright', serif;
-    font-size:x-large;
-    margin-left: 15px;
-    margin-top: 20px;
-    padding-top: 20px;
-}
-.progress-bar{
-    border:1px solid gray;
-    color: rgb(49, 48, 49);
-}
+
 .version{
-    text-align: left;
-    margin-top: 20px;
-    margin-left: 15px;
+    float: left;
+    margin-left: 0px;
 }
+a{
+    font-family: 'Cormorant Upright', serif;
+    font-size: x-large;
+    color: rgb(49, 48, 49);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+.Contact{
+    font-family: 'Cormorant Upright', serif;
+    text-align: center;
+    font-family: 'Cormorant Upright', serif;
+    color: rgb(75, 73, 73);
+    font-size:x-large;
+    font-weight: bolder;
+    margin-top: 20px;
+
+}
+
 section:nth-of-type(1) {
+    padding-top: 15px;
     grid-area: section1;
     font-family: 'Cormorant Upright', serif;
     color: rgb(75, 73, 73);
     font-size:x-large;
     text-align: center;
-    
+    align-self: center;
 
 }
 .competence li{
     list-style-type: none; 
 }
 section:nth-of-type(2) {
-    padding: top 20px;
+    padding-top: 25px;
     grid-area: section2;
     font-family: 'Cormorant Upright', serif;
     color: rgb(75, 73, 73);
@@ -77,6 +88,8 @@ section:nth-of-type(2) {
     text-align: center;
     list-style-type: none; 
     line-height: 2em;
+    padding-bottom: 20px;
+    align-self: center;
 }
 .formation li{
     list-style-type: none; 
@@ -87,28 +100,45 @@ main {
     color: rgb(49, 48, 49);
     font-size:x-large;
     text-align: center;
-    padding-top:0;
-    list-style-type: none; 
+    list-style-type: none;
+    margin-top: 20px;
 }
 .experiencepro li{
     list-style-type: none; 
 }
-footer {
+footer{
     grid-area: footer;
-    font-family: 'Cormorant Upright', serif;
-    color: rgb(49, 48, 49);
-    text-align: center;
-    border: 3px gray groove;
+    display:flex;
+    list-style-type: none;
+    border-top: 5px gray groove;
     border-radius: 20px;
-}
-a{
-    font-family: 'Cormorant Upright', serif;
-    font-size: x-large;
-    color: rgb(49, 48, 49);
-    text-decoration-style: none;
-    text-align: center;
+    align-self: center;
+    margin-bottom: 0;
     padding-top: 10px;
+
 }
+.lienprojet{
+    font-family: 'Cormorant Upright', serif;
+    color: rgb(9, 8, 8);
+    font-size:100px;
+    margin-left: 50px;
+    font-weight: bolder;
+}
+.imageprojet img{
+    width: 200px;
+}
+.lienprojet2{
+    font-family: 'Cormorant Upright', serif;
+    color: rgb(9, 8, 8);
+    font-size:100px;
+    margin-left: 50px;
+    font-weight: bolder;
+}
+.imageprojet2 img{
+    width: 200px;
+}
+
+
 
 @media screen and (max-width: 870px) { 
     
@@ -118,9 +148,16 @@ a{
         display:block;
         
     }
+    aside{
+        border-right: none;
+        border-bottom: 3px gray groove;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
     h2{
         font-size: x-large;
         margin-top: 20px;
+        margin-left: 10px;
     }
 
     img{
@@ -128,9 +165,20 @@ a{
         width: 35%;
         height: 250px;
     }
+    .Contact{
+        font-family: 'Cormorant Upright', serif;
+        text-align: center;
+        font-family: 'Cormorant Upright', serif;
+        color: rgb(75, 73, 73);
+        font-size:x-large;
+        font-weight: bolder;
+        margin-left: 10px;
+
+    }
     section:nth-of-type(1) {
         margin-top: 20px;
         padding-bottom: 20px;
+        margin-left: 0;
         
     
     }
@@ -139,6 +187,7 @@ a{
     section:nth-of-type(2) {
         margin-top: 20px;
         padding-bottom: 20px;
+        margin-left: 0;
     }
     
     
@@ -146,4 +195,38 @@ a{
         margin-top: 20px;
         line-height: 2em; 
     }
+    .version{
+        padding-top: 20px;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+    footer{
+        display:flex;
+        flex-direction: column;
+    }
+    .lienprojet{
+        font-family: 'Cormorant Upright', serif;
+        color: rgb(49, 48, 49);
+        font-size:20px;
+    }
+    .imageprojet img{
+    float: left;
+        width: 60px;
+        height: 40px;
+        margin-left: 160px;
+
+    }
+    .lienprojet2{
+        font-family: 'Cormorant Upright', serif;
+        color: rgb(49, 48, 49);
+        font-size:20px;
+
+    }
+    .imageprojet2 img{
+        float: left;
+        width: 60px;
+        height: 40px;
+        margin-left: 160px;
+    }
+
 }
